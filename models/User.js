@@ -9,16 +9,16 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       name: {
-        type: DataTypes.String,
+        type: DataTypes.STRING,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.String,
+      email: {
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true,
       },
       password: {
-        type: DataTypes.String,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       role: {
@@ -35,12 +35,12 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
-      created_at: {
+      createdAt: {
         field: "created_at",
         type: DataTypes.DATE,
         allowNull: false,
       },
-      updated_at: {
+      updatedAt: {
         field: "updated_at",
         type: DataTypes.DATE,
         allowNull: false,
