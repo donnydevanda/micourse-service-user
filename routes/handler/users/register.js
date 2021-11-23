@@ -9,6 +9,7 @@ module.exports = async (req, res) => {
     email: "email|empty:false",
     password: "string|min:6",
     profession: "string|optional",
+    avatar: "string|optional",
   };
 
   const validate = v.validate(req.body, schema);
@@ -40,6 +41,7 @@ module.exports = async (req, res) => {
     email: req.body.email,
     profession: req.body.profession,
     role: "student",
+    avatar: req.body.avatar,
   };
 
   const createUser = await User.create(data);
